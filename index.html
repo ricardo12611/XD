@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes Servidor Infinix</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1>Solicitudes Servidor Infinix</h1>
+    </header>
+
+    <main id="app-container">
+        <!-- Sección de Inicio -->
+        <section id="home-section" class="page-section" aria-labelledby="home-title">
+            <h2 id="home-title">Bienvenido/a a las Solicitudes del Servidor Infinix</h2>
+            <div class="info-box">
+                <h3>¿Qué es una Apply?</h3>
+                <p>Una "apply" (o solicitud) es tu manera formal de expresar interés en unirte al equipo del servidor Infinix. Implica responder reflexivamente a una serie de preguntas diseñadas para ayudarnos a entender tu personalidad, habilidades, dedicación e idoneidad para el rol deseado.</p>
+            </div>
+            <div class="info-box">
+                <h3>Requisitos Generales</h3>
+                <ul>
+                    <li>Debes tener una cuenta de Discord activa y ser parte de nuestra comunidad.</li>
+                    <li>Demostrar respeto, madurez y una actitud positiva.</li>
+                    <li>Poseer un buen entendimiento de las mecánicas de Minecraft y la etiqueta del servidor.</li>
+                    <li>Estar dispuesto/a a aprender, adaptarte y contribuir constructivamente al ambiente del servidor.</li>
+                    <li>Puede aplicar una edad mínima para ciertos roles (detalles en las solicitudes específicas).</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>Herramientas Necesarias (General)</h3>
+                <ul>
+                    <li>Una conexión a internet estable.</li>
+                    <li>Una copia legítima de Minecraft Java Edition.</li>
+                    <li>El cliente de escritorio o móvil de Discord.</li>
+                    <li>Un micrófono funcional es altamente recomendado, especialmente para roles de Staff en adelante.</li>
+                </ul>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-button helper-bg" data-target="helper-apply-section" aria-label="Aplicar para el rol de Helper">Aplicar para Helper</button>
+                <button class="nav-button staff-bg" data-target="staff-apply-section" aria-label="Aplicar para el rol de Staff">Aplicar para Staff</button>
+                <button class="nav-button admin-bg" data-target="admin-apply-section" aria-label="Aplicar para el rol de Admin">Aplicar para Admin</button>
+            </div>
+        </section>
+
+        <!-- Sección Apply Helper -->
+        <section id="helper-apply-section" class="page-section" aria-labelledby="helper-apply-title">
+            <button type="button" class="back-button" data-target="home-section" aria-label="Volver a la página de inicio">&larr; Inicio</button>
+            <h2 id="helper-apply-title">Solicitud de Helper</h2>
+            <p class="rank-requirements">Para ser considerado Helper, necesitas responder al menos <strong>14 de 18</strong> preguntas de manera correcta y reflexiva. Tu dedicación y potencial son clave.</p>
+            <div class="timer-container">
+                <span class="timer-label">Tiempo:</span>
+                <span class="timer" id="helper-timer" aria-live="polite">00:00</span>
+            </div>
+            <form id="helper-form" class="apply-form">
+                <div class="form-group">
+                    <label for="helper-name">Tu Nombre:</label>
+                    <input type="text" id="helper-name" name="applicantName" required>
+                </div>
+                <div class="question-list"></div>
+                <button type="submit" class="submit-button helper-bg">Enviar Solicitud de Helper</button>
+            </form>
+        </section>
+
+        <!-- Sección Apply Staff -->
+        <section id="staff-apply-section" class="page-section" aria-labelledby="staff-apply-title">
+            <button type="button" class="back-button" data-target="home-section" aria-label="Volver a la página de inicio">&larr; Inicio</button>
+            <h2 id="staff-apply-title">Solicitud de Staff</h2>
+            <p class="rank-requirements">Para el rol de Staff, se deben responder correctamente un mínimo de <strong>23 de 25</strong> preguntas. Esperamos un alto nivel de comprensión y compromiso.</p>
+            <div class="timer-container">
+                <span class="timer-label">Tiempo:</span>
+                <span class="timer" id="staff-timer" aria-live="polite">00:00</span>
+            </div>
+            <form id="staff-form" class="apply-form">
+                <div class="form-group">
+                    <label for="staff-name">Tu Nombre:</label>
+                    <input type="text" id="staff-name" name="applicantName" required>
+                </div>
+                <div class="question-list"></div>
+                <button type="submit" class="submit-button staff-bg">Enviar Solicitud de Staff</button>
+            </form>
+        </section>
+
+        <!-- Sección Apply Admin -->
+        <section id="admin-apply-section" class="page-section" aria-labelledby="admin-apply-title">
+            <button type="button" class="back-button" data-target="home-section" aria-label="Volver a la página de inicio">&larr; Inicio</button>
+            <h2 id="admin-apply-title">Solicitud de Admin</h2>
+            <p class="rank-requirements">El rol de Admin exige perfección. Las <strong>30 de 30</strong> preguntas deben ser respondidas impecablemente. Solo se considerarán candidatos ejemplares.</p>
+            <div class="timer-container">
+                <span class="timer-label">Tiempo:</span>
+                <span class="timer" id="admin-timer" aria-live="polite">00:00</span>
+            </div>
+            <form id="admin-form" class="apply-form">
+                <div class="form-group">
+                    <label for="admin-name">Tu Nombre:</label>
+                    <input type="text" id="admin-name" name="applicantName" required>
+                </div>
+                <div class="question-list"></div>
+                <button type="submit" class="submit-button admin-bg">Enviar Solicitud de Admin</button>
+            </form>
+        </section>
+
+        <!-- Sección de Resultado de Envío -->
+        <section id="submission-result-section" class="page-section" aria-labelledby="submission-title">
+            <h2 id="submission-title">¡Solicitud Enviada!</h2>
+            <p id="submission-message">Gracias por aplicar. Tus detalles están a continuación.</p>
+            <div id="submission-details" class="submission-id-display"> <!-- Cambiado ID y clase -->
+                N° de Apply: <span id="apply-id-value">MM:SS</span> <span id="apply-suspicion-indicator" aria-live="assertive"></span>
+            </div>
+            <a id="email-link" href="#" target="_blank" rel="noopener noreferrer" class="submit-button email-button">Enviar Solicitud por Email</a>
+            <button type="button" class="nav-button back-to-home-btn" data-target="home-section" aria-label="Volver a la página de inicio">Volver al Inicio</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Servidor Infinix. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
